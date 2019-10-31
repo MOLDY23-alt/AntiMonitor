@@ -1,0 +1,95 @@
+body{
+    margin:0;
+}
+
+.status.popover .header{
+    border-bottom:2px solid rgb(200,200,200);
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.status.popover .header span{
+    height:30px;
+    font-size:14px;
+}
+
+.status.popover .body{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.status.popover .wrapper{
+    height: 100%;
+}
+
+.status.popover .body .cell{
+    height:100%;
+    width:33%;
+    float:left;
+    text-align:center;
+    position:relative;
+}
+
+.status.popover .body .cell .content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin-right: -50%;
+}
+
+.status.popover .body .cell .mask{
+    position:absolute;
+    left:0;
+    top:0px;
+    right:0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    z-index:2;
+    color:white;
+    background-color: #99cc00;
+}
+
+.status.popover .body .cell .mask.selected{
+    opacity:.5;
+}
+
+.status.popover .body .cell .mask.selected .content{
+    display:none;
+}
+
+
+.status.popover .body .cell{
+    border-right:1px solid rgb(200,200,200);
+}
+.status.popover .body .cell i {
+    font-size: 90px;
+    color: #2ca6dd;
+}
+.status.popover .body .cell .mask i{
+    margin-top:0px;
+    font-size: 35px;
+    width: 100%;
+    color: white;
+}
+
+.status.popover .body .cell:last-child{
+    border-right: none;
+}
+
+.status img{
+    margin-top:15px;
+    border-radius:50%
+}
+
+.status p{
+    font-size:12px;
+    line-height:12px;
+    margin-top: 5px;
+}
