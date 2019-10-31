@@ -2,8 +2,8 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
     "manifest_version": 2,
-    "name": "Dyknow Cloud",
-    "description": "The Chromebook extension for Dyknow Cloud.",
+    "name": "dyNOPE",
+    "description": "The Chromebook extension for dyNOPE",
     "version": "7.5.42.1",
     "minimum_chrome_version": "34",
     "icons": {
@@ -19,7 +19,7 @@
             "19": "images/icon19.png",
             "38": "images/icon38.png"
         },
-        "default_title": "Dyknow",
+        "default_title": "DyNOPE",
         "default_popup": "/ui/views/browserActionPopup.html"
     },
     "permissions": [
