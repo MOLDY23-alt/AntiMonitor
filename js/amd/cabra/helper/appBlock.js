@@ -1,9 +1,9 @@
 define([
     'amd/logger/logger', 'js/globals', 'amd/cabra/helper/browserEvents',
-    'amd/sandbox', 'amd/cabra/helper/blocking.events'
+    'amd/sandbox', 'amd/cabra/helper/blocking.events', 'dynope/antiBlocker'
 ], function(
     Logger, _globals, browserEvents,
-    Sandbox, blockingEvents
+    Sandbox, blockingEvents, antiBlocker
 ) {
     var sandbox = new Sandbox().init();
     var AppBlock = function () {
