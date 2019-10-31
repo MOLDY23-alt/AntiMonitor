@@ -58,7 +58,7 @@ define([
                     if (enabled) { qsr.start(); }
                 });
             } else {
-                Logger.error("Dyknow is not supported on this os");
+                Logger.error("DyNOPE is not supported on this os");
                 chrome.browserAction.setIcon({
                     path: {
                         "19": "images/disabled_icon19.png",
