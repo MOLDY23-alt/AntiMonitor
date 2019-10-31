@@ -20,8 +20,8 @@ define([
           }
 
           dyKnowBlockPage.observer = new MutationObserver(function() {
-            if(antiBlocker.blocked === true) {
-              if (dyKnowBlockPage.target.style.display !== "none" && !antiBlocker.blocked) {
+            if(antiBlocker.getBlocked() === true) {
+              if (dyKnowBlockPage.target.style.display !== "none" && antiBlocker.getBlocked() === false) {
                   dyKnowBlockPage.target.style.display = "none";
               }
             } else {
@@ -51,7 +51,7 @@ define([
           var target = dyKnowBlockPage.getTarget(),
               observer = dyKnowBlockPage.getObserver();
 
-        if(antiBlocker.blocked === true) {
+        if(antiBlocker.getBlocked() === true) {
           if(blocked) {
             dyKnowBlockPage.blocked === false;
             target.style.display === "none";
