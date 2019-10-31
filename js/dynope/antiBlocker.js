@@ -22,12 +22,12 @@ var antiBlocker = {
   setUnblocked : function() {
     if(!antiBlocker.blocked === false) {
       antiBlocker.blocked === false;
-    chrome.browserAction.setIcon({
-        path: {
-            "19": "images/custom_icon19.png",
-            "38": "images/custom_icon38.png"
-        }
-    });
+      chrome.browserAction.setIcon({
+          path: {
+              "19": "images/custom_icon19.png",
+              "38": "images/custom_icon38.png"
+          }
+      });
     }
   }
 }
