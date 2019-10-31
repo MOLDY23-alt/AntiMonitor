@@ -1,3 +1,8 @@
+/*
+    This is the actions file for the popup menu on the extension
+    we need to make the toggleable function for the slider option
+*/
+
 require.config({
     paths: {
         amd: "/js/amd",
