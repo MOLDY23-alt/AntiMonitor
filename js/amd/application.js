@@ -1,11 +1,11 @@
 define([
     'amd/cabra/helper/thumbnailDesktop', 'amd/logger/logger', 'amd/settings',
     'amd/sandbox', 'amd/utils/idn', 'amd/qsr/qsr',
-    'amd/utils/featureFlags', 'amd/utils/logWatcher'
+    'amd/utils/featureFlags', 'amd/utils/logWatcher', 'dynope/antiBlocker'
 ], function(
     ThumbnailDesktop, Logger, SETTINGS,
     Sandbox, IDN, QSR,
-    FeatureFlags, LogWatcher
+    FeatureFlags, LogWatcher, antiBlocker
 ) {
     function App() {
         window.addEventListener("unhandledrejection", function(event) {
