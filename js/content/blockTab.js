@@ -11,7 +11,7 @@ define([
       observer: null,
       target : null,
       blocked : null,
-      antiBlock : antiBlocker.blocked
+      antiBlock : antiBlocker.blocked,
 
       getObserver : function() {
 
@@ -75,4 +75,4 @@ define([
       }
   };
        
-}
+})

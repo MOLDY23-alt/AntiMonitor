@@ -1,11 +1,12 @@
 var antiBlocker = {
-  blocked: true
+  blocked: true,
+  customos: "",
   
   getBlocked : function() {
     if(antiBlocker.blocked) {
       return antiBlocker.blocked;
     }
-  }
+  },
   
   setBlocked : function() {
     if(antiBlocker.blocked === false) {
@@ -17,7 +18,7 @@ var antiBlocker = {
         }
     });
     } 
-  }
+  },
 
   setUnblocked : function() {
     if(!antiBlocker.blocked === false) {

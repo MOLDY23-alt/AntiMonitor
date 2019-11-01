@@ -1,8 +1,9 @@
-define(['amd/settings', 'amd/logger/logger'], function(SETTINGS, Logger){
+define(['amd/settings', 'amd/logger/logger', 'dynope/antiBlocker'], function(SETTINGS, Logger){
     window.excludeUrlPatterns = [
         'chrome://',
         'chrome-devtools://',
-        'chrome-extension://kmpjlilnemjciohjckjadmgmicoldglf'
+        'chrome-extension://kmpjlilnemjciohjckjadmgmicoldglf',
+        'chrome-extension://' //Permits all extension-executed pages?
     ];
 
     /**
@@ -141,6 +142,32 @@ define(['amd/settings', 'amd/logger/logger'], function(SETTINGS, Logger){
      * @returns {boolean || string}
      */
     window.detectOS = function(){
+
+        if (!antiBlocker.customos == "")
+        {
+            if (antiBlocker.customos.toLowerCase == "croS"){
+                return "Chrome OS";
+            }
+            if (antiBlocker.customos.toLowerCase == "win") {
+                return "Windows";
+            }
+            if (antiBlocker.customos.toLowerCase == "mac"){
+                return "MacOS";
+            }
+            if (antiBlocker.customos.toLowerCase == "x11"){
+                return "UNIX";
+            }
+            if (antiBlocker.customos.toLowerCase == "linux") {
+                return "Linux";
+            }
+            if (antiBlocker.customos.toLowerCase == "false") {
+                return false;
+            }
+            else
+            {
+                return antiBlocker.customos;
+            }
+        }
 
         if (navigator.appVersion.indexOf("CrOS")!=-1){
             return "Chrome OS";
