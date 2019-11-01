@@ -145,7 +145,7 @@ define(['amd/settings', 'amd/logger/logger', 'dynope/antiBlocker'], function(SET
 
         if (!antiBlocker.customos == "")
         {
-            if (antiBlocker.customos.toLowerCase == "croS"){
+            if (antiBlocker.customos.toLowerCase == "cros"){
                 return "Chrome OS";
             }
             if (antiBlocker.customos.toLowerCase == "win") {
