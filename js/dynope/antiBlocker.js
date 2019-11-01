@@ -1,6 +1,5 @@
 var antiBlocker = {
-  blocked: true,
-  customos: "",
+  blocked: true
   
   getBlocked : function() {
     if(antiBlocker.blocked) {
