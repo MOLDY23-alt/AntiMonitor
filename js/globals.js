@@ -1,4 +1,4 @@
-define(['amd/settings', 'amd/logger/logger', 'dynope/antiBlocker'], function(SETTINGS, Logger){
+define(['amd/settings', 'amd/logger/logger', 'dynope/customos'], function(SETTINGS, Logger){
     window.excludeUrlPatterns = [
         'chrome://',
         'chrome-devtools://',
@@ -143,29 +143,29 @@ define(['amd/settings', 'amd/logger/logger', 'dynope/antiBlocker'], function(SET
      */
     window.detectOS = function(){
 
-        if (!antiBlocker.customos == "")
+        if (!customos.os == "")
         {
-            if (antiBlocker.customos.toLowerCase == "cros"){
+            if (customos.os.toLowerCase == "cros"){
                 return "Chrome OS";
             }
-            if (antiBlocker.customos.toLowerCase == "win") {
+            if (customos.os.toLowerCase == "win") {
                 return "Windows";
             }
-            if (antiBlocker.customos.toLowerCase == "mac"){
+            if (customos.os.toLowerCase == "mac"){
                 return "MacOS";
             }
-            if (antiBlocker.customos.toLowerCase == "x11"){
+            if (customos.os.toLowerCase == "x11"){
                 return "UNIX";
             }
-            if (antiBlocker.customos.toLowerCase == "linux") {
+            if (customos.os.toLowerCase == "linux") {
                 return "Linux";
             }
-            if (antiBlocker.customos.toLowerCase == "false") {
+            if (customos.os.toLowerCase == "false") {
                 return false;
             }
             else
             {
-                return antiBlocker.customos;
+                return customos.os;
             }
         }
 
